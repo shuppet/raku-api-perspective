@@ -1,0 +1,19 @@
+{
+  "license": "BSD-3-Clause",
+  "repo-type": "git",
+  "source-url": "git://github.com/shuppet/p6-api-perspective.git",
+  "auth": "github:shuppet",
+  "provides": {
+    "API::Perspective": "lib/API/Perspective.pm6"
+  },
+  "name": "API::Perspective",
+  "depends": [
+    "Cro::HTTP::Client"
+  ],
+  "description": "Perl 6 module for interacting with the Google Perspective API.",
+  "perl": "6.c",
+  "version": "0.0.1",
+  "authors": [
+    "Kane 'kawaii' Valentine <kane@cute.im>"
+  ]
+}
