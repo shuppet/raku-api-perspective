@@ -28,9 +28,5 @@ method analyze(:$comment, :@models) {
         }
     );
 
-    say await $analysis.body;
-}
-
-method suggest-score(:$model, :$comment, :$score) {
-
+    return await $analysis.body;
 }
