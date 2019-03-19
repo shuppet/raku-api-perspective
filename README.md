@@ -17,10 +17,3 @@ git clone https://github.com/shuppet/p6-api-perspective
 cd p6-api-perspective/ && zef install ${PWD}
 ```
 
-## Usage
-
-Full documentation can be found by reading the [wiki](https://github.com/kawaiiforums/p6-api-perspective/wiki) attached to this repository, or by reading the pod directly from the module source.
-
-```
-p6doc API::Perspective
-```
