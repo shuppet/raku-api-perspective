@@ -30,3 +30,25 @@ method analyze(:$comment, MODEL :@models) {
 
     return await $analysis.body;
 }
+
+method suggest-score(:$comment, MODEL :$model, :$value) {
+    my $suggestion = await $!http-client.post(
+        $.api-base ~ $.api-version ~ "/comments:suggestscore?key={$.api-key}",
+        body => {
+            comment => {
+                text => $comment
+            },
+            languages => [$.language],
+            attributeScores => {
+                $model => {
+                    summaryScore => {
+                        value => $value
+                    },
+                },
+            },
+            clientToken => "API::Perspective-" ~ (10000..99999).rand.Int.Str;
+        },
+    );
+
+    return await $suggestion.body;
+}
