@@ -16,7 +16,7 @@ has $.language = 'en';
 
 has $.http-client = Cro::HTTP::Client.new(content-type => 'application/json', http => '1.1');
 
-method analyze(:$comment, :@models where .all ~~ MODEL) {
+method analyze(:$comment, MODEL :@models) {
     my $analysis = await $!http-client.post(
         $.api-base ~ $.api-version ~ "/comments:analyze?key={$.api-key}",
         body => {
