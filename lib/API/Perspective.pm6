@@ -54,7 +54,7 @@ B<Named Arguments>: C<$comment>, C<MODEL @models>
 
 Submit a C<$comment> to the API for analysis, also specify the C<MODEL @models> you would like to use
 =end pod
-method analyze(:$comment, MODEL :@models) {
+method analyze(:$comment, :@models where {all(|$_) ~~ MODEL}) {
     my $analysis = await $!http-client.post(
         $.api-base ~ $.api-version ~ "/comments:analyze?key={$.api-key}",
         body => {
