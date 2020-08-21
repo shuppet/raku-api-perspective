@@ -4,15 +4,15 @@
   "source-url": "git://github.com/shuppet/p6-api-perspective.git",
   "auth": "github:shuppet",
   "provides": {
-    "API::Perspective": "lib/API/Perspective.pm6"
+    "API::Perspective": "lib/API/Perspective.rakumod"
   },
   "name": "API::Perspective",
   "depends": [
     "Cro::HTTP::Client"
   ],
   "description": "Perl 6 module for interacting with the Google Perspective API.",
-  "perl": "6.c",
-  "version": "0.2",
+  "perl": "6.d",
+  "version": "0.3",
   "authors": [
     "Kane 'kawaii' Valentine <kane@cute.im>"
   ]
