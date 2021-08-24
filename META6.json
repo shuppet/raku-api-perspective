@@ -1,7 +1,7 @@
 {
   "license": "BSD-3-Clause",
   "repo-type": "git",
-  "source-url": "git://github.com/shuppet/p6-api-perspective.git",
+  "source-url": "git://github.com/shuppet/raku-api-perspective.git",
   "auth": "github:shuppet",
   "provides": {
     "API::Perspective": "lib/API/Perspective.rakumod"
@@ -10,7 +10,7 @@
   "depends": [
     "Cro::HTTP::Client"
   ],
-  "description": "Perl 6 module for interacting with the Google Perspective API.",
+  "description": "Raku module for interacting with the Google Perspective API.",
   "perl": "6.d",
   "version": "0.3",
   "authors": [
